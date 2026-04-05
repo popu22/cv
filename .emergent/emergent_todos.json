@@ -1,10 +1,14 @@
 [
   {
-    "content": "Phase 2: Vérifier les logs et tester l'application",
+    "content": "Phase 2: Testing end-to-end avec Testing Agent",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Testing end-to-end avec Testing Agent",
-    "status": "in_progress"
+    "content": "Phase 2: Corriger le problème de navigation sur tablette",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Toutes les user stories couvertes en développement et testing",
+    "status": "completed"
   }
 ]

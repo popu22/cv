@@ -102,9 +102,18 @@
   .fixed-navigation {
     right: 20px;
   }
+  
+  .fixed-navigation .label {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .fixed-navigation button {
+    padding: 8px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .fixed-navigation {
     display: none;
   }
