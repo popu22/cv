@@ -24,7 +24,7 @@ export const translations = {
       languages: 'Langues',
       languagesValue: 'Français, Anglais, Allemand',
       age: 'Age',
-      ageValue: '31 Ans',
+      // L'âge sera calculé automatiquement
       nationality: 'Nationalité',
       nationalityValue: 'Suisse',
       email: 'Email',
@@ -167,7 +167,7 @@ export const translations = {
       languages: 'Sprachen',
       languagesValue: 'Französisch, Englisch, Deutsch',
       age: 'Alter',
-      ageValue: '31 Jahre',
+      // L'âge sera calculé automatiquement
       nationality: 'Nationalität',
       nationalityValue: 'Schweiz',
       email: 'E-Mail',
@@ -310,7 +310,7 @@ export const translations = {
       languages: 'Lingue',
       languagesValue: 'Francese, Inglese, Tedesco',
       age: 'Età',
-      ageValue: '31 anni',
+      // L'âge sera calculé automatiquement
       nationality: 'Nazionalità',
       nationalityValue: 'Svizzera',
       email: 'Email',

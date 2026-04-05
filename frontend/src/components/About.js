@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import { calculateAge, formatAge } from '../utils/dateUtils';
 import './About.css';
 
 const About = () => {
@@ -20,11 +21,14 @@ const About = () => {
     document.body.removeChild(link);
   };
 
+  // Calcul automatique de l'âge basé sur la date de naissance (22 août 1993)
+  const age = calculateAge('1993-08-22');
+  
   const infoItems = [
     { label: t.about.name, value: t.about.fullName },
     { label: t.about.birthday, value: t.about.birthdayValue },
     { label: t.about.languages, value: t.about.languagesValue },
-    { label: t.about.age, value: t.about.ageValue },
+    { label: t.about.age, value: formatAge(age, language) },
     { label: t.about.nationality, value: t.about.nationalityValue },
     { label: t.about.email, value: 'contact@jeremystalder.net' }
   ];
