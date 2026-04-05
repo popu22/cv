@@ -1,0 +1,3 @@
+Placeholder: Veuillez ajouter votre photo de profil ici (avatar.jpg)
+Dimensions recommandées: 400x400px
+Format: JPG ou PNG

@@ -1,0 +1,84 @@
+import React from 'react';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { useGeoRestriction } from './hooks/useGeoRestriction';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import Navigation from './components/Navigation';
+import BackToTop from './components/BackToTop';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import References from './components/References';
+import './App.css';
+
+const GeoRestrictedAccess = () => {
+  return (
+    <div className="geo-restricted">
+      <div className="restriction-content">
+        <h1>Accès restreint</h1>
+        <p>
+          Ce CV est uniquement accessible depuis la Suisse.
+          <br />
+          Si vous pensez qu'il s'agit d'une erreur, veuillez désactiver tout VPN ou proxy, puis actualiser la page.
+        </p>
+        <p>
+          Si le problème persiste, veuillez contacter{' '}
+          <a href="mailto:contact@jeremystalder.net">contact@jeremystalder.net</a>.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const LoadingScreen = () => {
+  return (
+    <div className="loading-screen">
+      <div className="loader">
+        <div className="spinner"></div>
+        <p>Vérification de la localisation...</p>
+      </div>
+    </div>
+  );
+};
+
+function AppContent() {
+  const { isAllowed, isChecking } = useGeoRestriction();
+
+  if (isChecking) {
+    return <LoadingScreen />;
+  }
+
+  if (!isAllowed) {
+    return <GeoRestrictedAccess />;
+  }
+
+  return (
+    <div className="app-container">
+      <LanguageSwitcher />
+      <Navigation />
+      <BackToTop />
+      
+      <div className="cv-content">
+        <Hero />
+        <div className="cv-sections">
+          <About />
+          <Experience />
+          <Skills />
+          <Education />
+          <References />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
+  );
+}
+
+export default App;

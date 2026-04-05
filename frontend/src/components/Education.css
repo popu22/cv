@@ -1,0 +1,20 @@
+/* Les styles sont partagés avec Experience.css */
+/* Ajout de styles spécifiques pour Education si nécessaire */
+
+#education .timeline-item {
+  background: linear-gradient(135deg, #2d2d2d 0%, #252525 100%);
+}
+
+#education .timeline-item:hover {
+  background: linear-gradient(135deg, #353535 0%, #2b2b2b 100%);
+}
+
+#education .timeline-marker {
+  border: 3px solid #383838;
+}
+
+@media (max-width: 768px) {
+  #education .item {
+    padding: 25px 20px;
+  }
+}
