@@ -154,3 +154,30 @@
     padding: 0 10px;
   }
 }
+
+
+
+/* Light Mode Styles */
+body.light .progress_title {
+  color: #222;
+}
+
+body.light .progress_percent {
+  background: linear-gradient(135deg, var(--mc) 0%, #0613b5 100%);
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .progress_bg {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .progress_item:hover .progress_bg {
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(5, 21, 161, 0.3);
+}
+
+body.light .progress_fill {
+  background: linear-gradient(90deg, var(--mc) 0%, #0613b5 100%);
+}

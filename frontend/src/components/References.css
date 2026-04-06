@@ -140,3 +140,36 @@
     padding: 20px;
   }
 }
+
+/* Light Mode Styles */
+body.light .fn_cs_service_list .item {
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light .fn_cs_service_list .item:hover {
+  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+  border-color: rgba(5, 21, 161, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+body.light .fn_cs_service_list .item_left h3 {
+  color: #222;
+}
+
+body.light .fn_cs_service_list .item_left p {
+  color: #555;
+}
+
+body.light .fn_cs_service_list .item_right {
+  border-left-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+body.light .fn_cs_service_list .item_right p {
+  color: #666;
+}
+
+body.light .fn_cs_service_list .item_right h3 {
+  color: var(--mc);
+}
