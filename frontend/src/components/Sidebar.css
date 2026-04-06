@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 350px;
   height: fit-content;
-  max-height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 25px 18px;
@@ -12,28 +12,17 @@
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  scrollbar-width: thin;
-  scrollbar-color: var(--mc-light) transparent;
+  
+  /* Masquer complètement la scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE et Edge */
 }
 
-/* Cacher la scrollbar mais garder la fonctionnalité */
+/* Masquer scrollbar pour Chrome, Safari et Opera */
 .cv-sidebar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.cv-sidebar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.cv-sidebar::-webkit-scrollbar-thumb {
-  background: var(--mc-light);
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.cv-sidebar:hover::-webkit-scrollbar-thumb {
-  opacity: 1;
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .sidebar-section {

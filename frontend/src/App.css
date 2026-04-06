@@ -61,6 +61,7 @@ body.light {
   grid-template-columns: 350px 1fr;
   gap: 40px;
   align-items: start;
+  min-height: 100vh;
 }
 
 .cv-main {
@@ -68,6 +69,7 @@ body.light {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-height: 100%;
 }
 
 /* Geo Restriction Screen */
