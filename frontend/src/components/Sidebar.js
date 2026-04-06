@@ -123,6 +123,25 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
+
+      {/* Hobbies / Centres d'Intérêt */}
+      <div className="sidebar-section">
+        <h3 className="sidebar-title">{t.hobbies?.title || "Centres d'Intérêt"}</h3>
+        <div className="sidebar-hobbies">
+          {(t.hobbies?.list || []).map((hobby, index) => (
+            <motion.div
+              key={index}
+              className="sidebar-hobby"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+            >
+              <div className="hobby-icon">{hobby.icon}</div>
+              <div className="hobby-name">{hobby.name}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </motion.aside>
   );
 };

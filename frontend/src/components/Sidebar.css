@@ -6,47 +6,57 @@
   height: fit-content;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
-  padding: 30px 20px;
+  overflow-x: hidden;
+  padding: 25px 18px;
   background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: var(--mc-light) transparent;
 }
 
+/* Cacher la scrollbar mais garder la fonctionnalité */
 .cv-sidebar::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .cv-sidebar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  background: transparent;
 }
 
 .cv-sidebar::-webkit-scrollbar-thumb {
   background: var(--mc-light);
-  border-radius: 3px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cv-sidebar:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
 }
 
 .sidebar-section {
-  margin-bottom: 35px;
-  padding-bottom: 30px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .sidebar-section:last-child {
   border-bottom: none;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .sidebar-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #eee;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  margin-bottom: 15px;
   position: relative;
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 .sidebar-title::before {
@@ -55,8 +65,8 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 20px;
+  width: 3px;
+  height: 16px;
   background: linear-gradient(180deg, var(--mc-light) 0%, var(--mc-bright) 100%);
   border-radius: 2px;
 }
@@ -65,16 +75,16 @@
 .stats-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px;
+  gap: 12px;
+  padding: 12px;
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.03);
   transition: all 0.3s ease;
 }
@@ -86,7 +96,7 @@
 }
 
 .stat-item .stat-icon {
-  font-size: 32px;
+  font-size: 28px;
   flex-shrink: 0;
 }
 
@@ -95,15 +105,15 @@
 }
 
 .stat-item .stat-value {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--mc-light);
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .stat-item .stat-label {
-  font-size: 12px;
+  font-size: 11px;
   color: #aaa;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -114,11 +124,11 @@
 .sidebar-tech-skills {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .sidebar-skill {
-  padding: 12px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.03);
@@ -134,28 +144,28 @@
 .skill-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 6px;
 }
 
 .sidebar-skill .skill-icon {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sidebar-skill .skill-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: #eee;
 }
 
 .skill-stars {
   display: flex;
-  gap: 3px;
+  gap: 2px;
 }
 
 .skill-stars .star {
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .skill-stars .star.filled {
@@ -166,14 +176,14 @@
 .sidebar-certifications {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .sidebar-cert {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
+  gap: 10px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.03);
@@ -187,7 +197,7 @@
 }
 
 .sidebar-cert .cert-icon {
-  font-size: 28px;
+  font-size: 24px;
   flex-shrink: 0;
 }
 
@@ -196,16 +206,54 @@
 }
 
 .sidebar-cert .cert-name {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: #eee;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .sidebar-cert .cert-year {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--mc-light);
   font-weight: 500;
+}
+
+/* Hobbies dans la sidebar */
+.sidebar-hobbies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.sidebar-hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sidebar-hobby:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(65, 105, 225, 0.2);
+  transform: translateY(-3px);
+}
+
+.sidebar-hobby .hobby-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.sidebar-hobby .hobby-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: #eee;
+  line-height: 1.2;
 }
 
 /* Light mode */
@@ -225,14 +273,16 @@ body.light .sidebar-section {
 
 body.light .stat-item,
 body.light .sidebar-skill,
-body.light .sidebar-cert {
+body.light .sidebar-cert,
+body.light .sidebar-hobby {
   background: rgba(0, 0, 0, 0.02);
   border-color: rgba(0, 0, 0, 0.05);
 }
 
 body.light .stat-item:hover,
 body.light .sidebar-skill:hover,
-body.light .sidebar-cert:hover {
+body.light .sidebar-cert:hover,
+body.light .sidebar-hobby:hover {
   background: rgba(0, 0, 0, 0.04);
   border-color: rgba(5, 21, 161, 0.2);
 }
@@ -242,7 +292,8 @@ body.light .stat-label {
 }
 
 body.light .sidebar-skill .skill-name,
-body.light .sidebar-cert .cert-name {
+body.light .sidebar-cert .cert-name,
+body.light .sidebar-hobby .hobby-name {
   color: #222;
 }
 
@@ -255,7 +306,12 @@ body.light .skill-stars .star {
     position: relative;
     top: 0;
     max-width: 100%;
+    max-height: none;
     margin-bottom: 30px;
+  }
+  
+  .sidebar-hobbies {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -265,10 +321,25 @@ body.light .skill-stars .star {
   }
   
   .stat-item .stat-icon {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .stat-item .stat-value {
-    font-size: 24px;
+    font-size: 20px;
+  }
+  
+  .sidebar-hobbies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .sidebar-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-hobbies {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

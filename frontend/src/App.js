@@ -76,7 +76,6 @@ function AppContent() {
             <Experience />
             <Skills />
             <Education />
-            <Hobbies />
             <References />
             <ContactForm />
             <ShareButtons />
