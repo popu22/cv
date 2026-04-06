@@ -2,8 +2,7 @@ import React from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { useGeoRestriction } from './hooks/useGeoRestriction';
 import ReadingProgress from './components/ReadingProgress';
-import ThemeToggle from './components/ThemeToggle';
-import LanguageSwitcher from './components/LanguageSwitcher';
+import TopBar from './components/TopBar';
 import Navigation from './components/Navigation';
 import BackToTop from './components/BackToTop';
 import Hero from './components/Hero';
@@ -61,8 +60,7 @@ function AppContent() {
   return (
     <div className="app-container">
       <ReadingProgress />
-      <ThemeToggle />
-      <LanguageSwitcher />
+      <TopBar />
       <Navigation />
       <BackToTop />
       

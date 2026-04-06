@@ -13,7 +13,7 @@
   overflow: hidden;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  animation: fadeInBadge 0.5s ease;
+  animation: fadeInBadge 0.5s ease, breathe 3s ease-in-out infinite;
 }
 
 @keyframes fadeInBadge {
@@ -24,6 +24,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--badge-color-shadow);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--badge-color-shadow), 0 0 40px var(--badge-color-shadow);
+    transform: scale(1.02);
   }
 }
 
@@ -61,14 +72,17 @@
 }
 
 .availability-badge[data-status="available"] {
+  --badge-color-shadow: rgba(16, 185, 129, 0.4);
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
 }
 
 .availability-badge[data-status="open"] {
+  --badge-color-shadow: rgba(245, 158, 11, 0.4);
   box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
 }
 
 .availability-badge[data-status="unavailable"] {
+  --badge-color-shadow: rgba(239, 68, 68, 0.4);
   box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
 }
 
