@@ -332,3 +332,118 @@ body.light .skill-stars .star {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Achievements in Sidebar */
+.sidebar-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-achievement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.sidebar-achievement:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(65, 105, 225, 0.2);
+  transform: translateX(5px);
+}
+
+.sidebar-achievement .achievement-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.sidebar-achievement .achievement-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--mc-light);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.sidebar-achievement .achievement-label {
+  font-size: 11px;
+  color: #aaa;
+  line-height: 1.3;
+}
+
+/* Why Me in Sidebar */
+.sidebar-whyme {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-reason {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.sidebar-reason:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(65, 105, 225, 0.2);
+  transform: translateX(5px);
+}
+
+.sidebar-reason .reason-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sidebar-reason .reason-content {
+  flex: 1;
+}
+
+.sidebar-reason .reason-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mc-light);
+  margin-bottom: 4px;
+}
+
+.sidebar-reason .reason-description {
+  font-size: 12px;
+  color: #bbb;
+  line-height: 1.4;
+}
+
+/* Light Mode Adjustments */
+body.light .sidebar-achievement,
+body.light .sidebar-reason {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light .sidebar-achievement:hover,
+body.light .sidebar-reason:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(5, 21, 161, 0.2);
+}
+
+body.light .sidebar-achievement .achievement-label {
+  color: #666;
+}
+
+body.light .sidebar-reason .reason-description {
+  color: #555;
+}

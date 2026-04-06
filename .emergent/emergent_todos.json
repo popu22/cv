@@ -1,14 +1,26 @@
 [
   {
-    "content": "Phase 2: Testing end-to-end avec Testing Agent",
+    "content": "Corriger le bug des langues vides dans la Sidebar (vérifier le data binding)",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Corriger le problème de navigation sur tablette",
+    "content": "Intégrer le composant Achievements dans la Sidebar",
     "status": "completed"
   },
   {
-    "content": "Phase 2: Toutes les user stories couvertes en développement et testing",
+    "content": "Intégrer le composant WhyMe dans la Sidebar",
     "status": "completed"
+  },
+  {
+    "content": "Ajouter les traductions manquantes (DE, IT, EN) pour tous les nouveaux composants premium",
+    "status": "completed"
+  },
+  {
+    "content": "Tester visuellement la nouvelle structure de la Sidebar avec screenshots",
+    "status": "completed"
+  },
+  {
+    "content": "Lancer testing_agent_v3 pour tests complets (responsive, multilangue, timeline)",
+    "status": "in_progress"
   }
 ]

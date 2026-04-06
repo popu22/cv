@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
-import LanguageSkills from './LanguageSkills';
 import './Sidebar.css';
+import './LanguageSkills.css';
 
 const CountUp = ({ end, duration = 2, suffix = '' }) => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 });
@@ -78,7 +78,31 @@ const Sidebar = () => {
       </div>
 
       {/* Language Skills */}
-      <LanguageSkills />
+      <div className="sidebar-section">
+        <h3 className="sidebar-title">{t.languageSkills?.title || 'Langues'}</h3>
+        <div className="language-skills-list">
+          {(t.languageSkills?.languages || []).map((lang, index) => (
+            <motion.div
+              key={index}
+              className="language-skill"
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <div className="lang-header">
+                <span className="lang-flag">{lang.flag}</span>
+                <span className="lang-name">{lang.name}</span>
+              </div>
+              <div className="lang-level">
+                <span className="level-badge" style={{ backgroundColor: lang.color }}>
+                  {lang.level}
+                </span>
+                <span className="level-cecr">{lang.cecr}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
       {/* Technical Skills */}
       <div className="sidebar-section">
@@ -142,6 +166,52 @@ const Sidebar = () => {
             >
               <div className="hobby-icon">{hobby.icon}</div>
               <div className="hobby-name">{hobby.name}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Achievements / Réalisations Clés */}
+      <div className="sidebar-section">
+        <h3 className="sidebar-title">{t.achievements?.title || 'Réalisations Clés'}</h3>
+        <div className="sidebar-achievements">
+          {(t.achievements?.list || []).map((achievement, index) => (
+            <motion.div
+              key={index}
+              className="sidebar-achievement"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <div className="achievement-icon">{achievement.icon}</div>
+              <div className="achievement-content">
+                <div className="achievement-value">
+                  <CountUp end={achievement.value} suffix={achievement.suffix || ''} />
+                </div>
+                <div className="achievement-label">{achievement.label}</div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Why Me / Pourquoi Moi */}
+      <div className="sidebar-section">
+        <h3 className="sidebar-title">{t.whyMe?.title || 'Pourquoi Moi ?'}</h3>
+        <div className="sidebar-whyme">
+          {(t.whyMe?.reasons || []).map((reason, index) => (
+            <motion.div
+              key={index}
+              className="sidebar-reason"
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <div className="reason-icon">{reason.icon}</div>
+              <div className="reason-content">
+                <div className="reason-title">{reason.title}</div>
+                <div className="reason-description">{reason.description}</div>
+              </div>
             </motion.div>
           ))}
         </div>

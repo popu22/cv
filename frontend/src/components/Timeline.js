@@ -31,16 +31,18 @@ const Timeline = () => {
           <motion.div
             key={index}
             className="timeline-event"
+            data-event-type={event.type}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <div className="timeline-year" style={{ backgroundColor: event.color }}>
+            <div className="timeline-year" style={{ backgroundColor: event.color, borderColor: event.color }}>
+              <span className="year-icon">{event.icon}</span>
               {event.year}
             </div>
-            <div className="timeline-content">
+            <div className="timeline-content" data-type={event.type}>
               <h4>{event.title}</h4>
-              <p>{event.description}</p>
+              {event.description && <p>{event.description}</p>}
             </div>
           </motion.div>
         ))}
