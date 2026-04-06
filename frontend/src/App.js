@@ -8,12 +8,10 @@ import Navigation from './components/Navigation';
 import BackToTop from './components/BackToTop';
 import Hero from './components/Hero';
 import About from './components/About';
-import KeyStats from './components/KeyStats';
+import Sidebar from './components/Sidebar';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import TechnicalSkills from './components/TechnicalSkills';
 import Education from './components/Education';
-import Certifications from './components/Certifications';
 import Hobbies from './components/Hobbies';
 import References from './components/References';
 import ContactForm from './components/ContactForm';
@@ -71,18 +69,18 @@ function AppContent() {
       
       <div className="cv-content">
         <Hero />
-        <div className="cv-sections">
-          <About />
-          <KeyStats />
-          <Experience />
-          <Skills />
-          <TechnicalSkills />
-          <Education />
-          <Certifications />
-          <Hobbies />
-          <References />
-          <ContactForm />
-          <ShareButtons />
+        <div className="cv-layout">
+          <Sidebar />
+          <div className="cv-main">
+            <About />
+            <Experience />
+            <Skills />
+            <Education />
+            <Hobbies />
+            <References />
+            <ContactForm />
+            <ShareButtons />
+          </div>
         </div>
       </div>
     </div>
