@@ -8,15 +8,18 @@ import Navigation from './components/Navigation';
 import BackToTop from './components/BackToTop';
 import Hero from './components/Hero';
 import About from './components/About';
+import Achievements from './components/Achievements';
 import Sidebar from './components/Sidebar';
+import Timeline from './components/Timeline';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
-import Hobbies from './components/Hobbies';
+import WhyMe from './components/WhyMe';
 import References from './components/References';
 import ContactForm from './components/ContactForm';
 import ShareButtons from './components/ShareButtons';
 import './App.css';
+import './styles/print.css';
 
 const GeoRestrictedAccess = () => {
   return (

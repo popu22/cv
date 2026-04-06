@@ -144,6 +144,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   min-height: 1.1em;
+  margin-bottom: 25px;
+}
+
+.hero-badges {
+  margin: 20px 0;
 }
 
 .typing-text {
