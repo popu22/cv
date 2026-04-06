@@ -31,7 +31,18 @@
 }
 
 .lang-btn .flag {
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.flag-svg {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .lang-btn:hover {
