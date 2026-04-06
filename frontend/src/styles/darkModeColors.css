@@ -1,0 +1,147 @@
+/* Amélioration des couleurs en mode sombre pour meilleur contraste */
+
+/* Textes en bleu - version plus claire en mode sombre */
+body:not(.light) .item_top h5,
+body:not(.light) .cert-year,
+body:not(.light) .stat-value,
+body:not(.light) .expand-icon,
+body:not(.light) .cursor,
+body:not(.light) a {
+  color: var(--mc-light) !important;
+}
+
+/* Bordures et accents */
+body:not(.light) .stat-card:hover,
+body:not(.light) .tech-skill-item:hover,
+body:not(.light) .hobby-item:hover,
+body:not(.light) .cert-badge:hover {
+  border-color: var(--mc-light) !important;
+  box-shadow: 0 8px 25px rgba(65, 105, 225, 0.3) !important;
+}
+
+/* Boutons et badges actifs */
+body:not(.light) .lang-btn.active,
+body:not(.light) .btn-download,
+body:not(.light) .submit-btn,
+body:not(.light) .share-btn.copy:hover {
+  background: linear-gradient(135deg, var(--mc-light) 0%, var(--mc-bright) 100%) !important;
+  box-shadow: 0 4px 15px rgba(65, 105, 225, 0.4) !important;
+}
+
+body:not(.light) .lang-btn.active {
+  border-color: var(--mc-light) !important;
+  box-shadow: 0 0 20px rgba(65, 105, 225, 0.5) !important;
+}
+
+/* Navigation dots */
+body:not(.light) .fixed-navigation button.active .dot {
+  background: var(--mc-light) !important;
+  border-color: var(--mc-light) !important;
+  box-shadow: 0 0 10px rgba(65, 105, 225, 0.6) !important;
+}
+
+body:not(.light) .fixed-navigation button.active .label {
+  color: var(--mc-light) !important;
+}
+
+/* Back to top button */
+body:not(.light) .back-to-top {
+  background: var(--mc-light) !important;
+  box-shadow: 0 4px 15px rgba(65, 105, 225, 0.4) !important;
+}
+
+body:not(.light) .back-to-top:hover {
+  background: var(--mc-bright) !important;
+  box-shadow: 0 6px 20px rgba(91, 127, 255, 0.6) !important;
+}
+
+/* Progress bars */
+body:not(.light) .progress_percent {
+  background: linear-gradient(135deg, var(--mc-light) 0%, var(--mc-bright) 100%) !important;
+  box-shadow: 0 4px 15px rgba(65, 105, 225, 0.4) !important;
+}
+
+body:not(.light) .progress_fill::after {
+  background: linear-gradient(180deg, var(--mc-light) 0%, var(--mc-bright) 100%) !important;
+  box-shadow: 0 0 10px var(--mc-light), -2px 0 5px var(--mc-light) !important;
+}
+
+/* Stars in tech skills */
+body:not(.light) .star.filled {
+  color: var(--mc-light) !important;
+  text-shadow: 0 0 10px rgba(65, 105, 225, 0.5) !important;
+}
+
+/* Reading progress bar */
+body:not(.light) .reading-progress-bar {
+  background: linear-gradient(90deg, var(--mc-light) 0%, var(--mc-bright) 50%, #d3a583 100%) !important;
+  box-shadow: 0 0 10px rgba(65, 105, 225, 0.5) !important;
+}
+
+/* Theme toggle hover */
+body:not(.light) .theme-toggle:hover {
+  background: var(--mc-light) !important;
+  border-color: var(--mc-light) !important;
+  box-shadow: 0 0 20px rgba(65, 105, 225, 0.5) !important;
+}
+
+/* Links and interactive elements */
+body:not(.light) .fn_cs_info_items li:hover {
+  border-color: rgba(65, 105, 225, 0.3) !important;
+  box-shadow: 0 5px 15px rgba(65, 105, 225, 0.2) !important;
+}
+
+/* Gradients avec meilleur contraste */
+body:not(.light) .my_self h2 {
+  background: linear-gradient(135deg, #fff 0%, var(--mc-bright) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Section borders */
+body:not(.light) .cv-section::before {
+  background: linear-gradient(180deg, var(--mc-light) 0%, #d3a583 100%) !important;
+}
+
+body:not(.light) .section_title h3:after {
+  background: linear-gradient(90deg, var(--mc-light) 0%, transparent 100%) !important;
+}
+
+/* Timeline markers */
+body:not(.light) .timeline::before {
+  background: linear-gradient(180deg, var(--mc-light) 0%, #d3a583 100%) !important;
+}
+
+body:not(.light) .timeline-marker {
+  box-shadow: 0 0 0 8px rgba(65, 105, 225, 0.2) !important;
+}
+
+body:not(.light) .timeline-item:hover .timeline-marker {
+  box-shadow: 0 0 0 12px rgba(65, 105, 225, 0.3) !important;
+}
+
+/* Form focus states */
+body:not(.light) .form-group input:focus,
+body:not(.light) .form-group textarea:focus {
+  border-color: var(--mc-light) !important;
+  box-shadow: 0 0 20px rgba(65, 105, 225, 0.2) !important;
+}
+
+/* About quote accent */
+body:not(.light) .about-quote {
+  border-left-color: var(--mc-light) !important;
+}
+
+/* Item accents */
+body:not(.light) .fn_cs_service_list .item_left::after {
+  background: linear-gradient(180deg, var(--mc-light) 0%, var(--mc-bright) 100%) !important;
+}
+
+body:not(.light) .fn_cs_service_list .item:hover .item_left::after {
+  box-shadow: 0 0 15px var(--mc-light) !important;
+}
+
+body:not(.light) .fn_cs_service_list .item_right h3 {
+  color: var(--mc-light) !important;
+}

@@ -1,5 +1,7 @@
 :root {
   --mc: #0515a1;
+  --mc-light: #4169E1; /* Bleu plus clair pour mode sombre */
+  --mc-bright: #5B7FFF; /* Bleu encore plus lumineux */
 }
 
 * {
@@ -21,6 +23,15 @@ body {
   background-color: #151515;
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+/* Mode sombre - couleurs plus vives pour meilleur contraste */
+body:not(.light) {
+  --mc-active: var(--mc-light); /* Utilise bleu clair en mode sombre */
+}
+
+body.light {
+  --mc-active: var(--mc); /* Utilise bleu foncé en mode clair */
 }
 
 .app-container {
