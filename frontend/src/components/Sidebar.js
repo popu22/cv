@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
+import LanguageSkills from './LanguageSkills';
 import './Sidebar.css';
 
 const CountUp = ({ end, duration = 2, suffix = '' }) => {
@@ -75,6 +76,9 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
+
+      {/* Language Skills */}
+      <LanguageSkills />
 
       {/* Technical Skills */}
       <div className="sidebar-section">

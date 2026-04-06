@@ -61,6 +61,10 @@ const Hero = () => {
             <h2>
               <TypeWriter text={`${t.hero.name} ${t.hero.surname}`} delay={100} />
             </h2>
+            <div className="hero-badges">
+              <AvailabilityBadge />
+            </div>
+            <SocialLinks />
           </motion.div>
         </div>
       </div>

@@ -1,0 +1,102 @@
+.achievements-section {
+  background: linear-gradient(135deg, rgba(5, 21, 161, 0.05) 0%, rgba(211, 165, 131, 0.05) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(65, 105, 225, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.achievement-card:hover::before {
+  left: 100%;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--mc-light);
+  box-shadow: 0 10px 30px rgba(65, 105, 225, 0.3);
+}
+
+.achievement-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  filter: grayscale(0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
+.achievement-value {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--mc-light);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.achievement-label {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+body.light .achievement-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .achievement-label {
+  color: #666;
+}
+
+body.light .achievements-section {
+  background: linear-gradient(135deg, rgba(5, 21, 161, 0.03) 0%, rgba(211, 165, 131, 0.03) 100%);
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .achievement-card {
+    padding: 25px 15px;
+  }
+  
+  .achievement-icon {
+    font-size: 36px;
+  }
+  
+  .achievement-value {
+    font-size: 32px;
+  }
+}

@@ -73,9 +73,12 @@ function AppContent() {
           <Sidebar />
           <div className="cv-main">
             <About />
+            <Achievements />
+            <Timeline />
             <Experience />
             <Skills />
             <Education />
+            <WhyMe />
             <References />
             <ContactForm />
             <ShareButtons />

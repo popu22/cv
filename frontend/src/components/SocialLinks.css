@@ -1,0 +1,79 @@
+.social-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #eee;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--link-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover::before {
+  opacity: 0.2;
+}
+
+.social-link:hover {
+  transform: translateY(-5px) scale(1.1);
+  border-color: var(--link-color);
+  color: var(--link-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+body.light .social-link {
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

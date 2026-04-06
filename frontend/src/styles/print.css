@@ -1,0 +1,121 @@
+/* Mode Impression Optimisé */
+@media print {
+  /* Masquer les éléments interactifs */
+  .language-switcher,
+  .theme-toggle,
+  .fixed-navigation,
+  .back-to-top,
+  .reading-progress-container,
+  .share-section,
+  .contact-form,
+  button {
+    display: none !important;
+  }
+  
+  /* Layout optimisé pour l'impression */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .app-container {
+    background: white !important;
+  }
+  
+  /* Hero compact */
+  .hero-section {
+    min-height: auto !important;
+    padding: 30px 20px !important;
+    background: white !important;
+    page-break-after: avoid;
+  }
+  
+  .hero-container {
+    gap: 30px !important;
+  }
+  
+  .circle {
+    max-width: 150px !important;
+  }
+  
+  /* Layout 1 colonne pour l'impression */
+  .cv-layout {
+    display: block !important;
+    padding: 20px !important;
+  }
+  
+  .cv-sidebar {
+    position: relative !important;
+    max-width: 100% !important;
+    margin-bottom: 30px !important;
+    padding: 20px !important;
+    border: 2px solid #ddd !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  .cv-main {
+    width: 100% !important;
+  }
+  
+  /* Sections */
+  .cv-section {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .section_title h3 {
+    color: #333 !important;
+    border-bottom: 2px solid #333 !important;
+    padding-bottom: 10px !important;
+  }
+  
+  /* Couleurs pour l'impression */
+  h1, h2, h3, h4, h5, h6 {
+    color: #222 !important;
+  }
+  
+  p, span, li {
+    color: #444 !important;
+  }
+  
+  /* Timeline */
+  .timeline-visual {
+    padding: 20px 0 !important;
+  }
+  
+  .timeline-line {
+    background: #333 !important;
+  }
+  
+  /* Stats et achievements */
+  .stat-value,
+  .achievement-value {
+    color: #0515a1 !important;
+  }
+  
+  /* Liens */
+  a {
+    color: #0515a1 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Masquer les animations */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Footer avec informations de contact */
+  .print-footer {
+    display: block !important;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #333;
+    margin-top: 30px;
+  }
+}

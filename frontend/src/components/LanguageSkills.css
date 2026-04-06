@@ -1,0 +1,76 @@
+.language-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.language-skill {
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.language-skill:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(65, 105, 225, 0.2);
+  transform: translateX(5px);
+}
+
+.lang-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.lang-flag {
+  font-size: 20px;
+}
+
+.lang-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #eee;
+  flex: 1;
+}
+
+.lang-level {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.level-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.level-cecr {
+  font-size: 11px;
+  color: #999;
+  font-weight: 500;
+}
+
+body.light .language-skill {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light .language-skill:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+body.light .lang-name {
+  color: #222;
+}
+
+body.light .level-cecr {
+  color: #666;
+}
