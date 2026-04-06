@@ -216,6 +216,41 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
+
+      {/* Professionnalité / Soft Skills */}
+      <div className="sidebar-section">
+        <h3 className="sidebar-title">{t.skills?.title || 'Professionnalité'}</h3>
+        <div className="sidebar-skills">
+          {(t.skills?.list || []).map((skill, index) => {
+            // Convertir le pourcentage en nombre d'étoiles (sur 5)
+            const stars = Math.round((skill.value / 100) * 5);
+            const skillName = skill.name.replace(/^[^\s]+\s/, ''); // Retirer l'emoji du nom
+            const skillEmoji = skill.name.match(/^[^\s]+/)?.[0] || '⭐'; // Extraire l'emoji
+            
+            return (
+              <motion.div
+                key={index}
+                className="sidebar-skill-card"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+              >
+                <div className="skill-card-icon">{skillEmoji}</div>
+                <div className="skill-card-content">
+                  <div className="skill-card-name">{skillName}</div>
+                  <div className="skill-card-stars">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className={`star ${i < stars ? 'filled' : ''}`}>
+                        ⭐
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
     </motion.aside>
   );
 };

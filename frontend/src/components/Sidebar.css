@@ -447,3 +447,90 @@ body.light .sidebar-achievement .achievement-label {
 body.light .sidebar-reason .reason-description {
   color: #555;
 }
+
+/* Professionnalité / Soft Skills Cards */
+.sidebar-skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.sidebar-skill-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.sidebar-skill-card:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(65, 105, 225, 0.3);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(5, 21, 161, 0.2);
+}
+
+.skill-card-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.skill-card-content {
+  flex: 1;
+}
+
+.skill-card-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mc-light);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.skill-card-stars {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.skill-card-stars .star {
+  font-size: 14px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.skill-card-stars .star.filled {
+  opacity: 1;
+  filter: grayscale(0%);
+  animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Light mode */
+body.light .sidebar-skill-card {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light .sidebar-skill-card:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(5, 21, 161, 0.2);
+  box-shadow: 0 4px 15px rgba(5, 21, 161, 0.15);
+}
+
+body.light .skill-card-name {
+  color: #222;
+}

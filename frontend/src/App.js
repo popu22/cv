@@ -9,7 +9,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Sidebar from './components/Sidebar';
 import Timeline from './components/Timeline';
-import Skills from './components/Skills';
 import References from './components/References';
 import ContactForm from './components/ContactForm';
 import ShareButtons from './components/ShareButtons';
@@ -71,7 +70,6 @@ function AppContent() {
           <div className="cv-main">
             <About />
             <Timeline />
-            <Skills />
             <References />
             <ContactForm />
             <ShareButtons />

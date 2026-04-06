@@ -11,7 +11,6 @@ const Navigation = () => {
   const sections = [
     { id: 'about', label: t.navigation.about },
     { id: 'timeline', label: t.timeline?.title || 'Mon Parcours' },
-    { id: 'skills', label: t.navigation.skills },
     { id: 'references', label: t.navigation.references }
   ];
 
