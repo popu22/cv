@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 import './Hero.css';
+
+const TypeWriter = ({ text, delay = 100 }) => {
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setCurrentText(prevText => prevText + text[currentIndex]);
+        setCurrentIndex(prevIndex => prevIndex + 1);
+      }, delay);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, delay, text]);
+
+  return <span className="typing-text">{currentText}<span className="cursor">|</span></span>;
+};
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -41,12 +59,7 @@ const Hero = () => {
           >
             <h4>{t.hero.greeting}</h4>
             <h2>
-              <span className="cd-headline clip">
-                <span className="cd-words-wrapper">
-                  <b className="is-visible">{t.hero.name}</b>
-                  <b>{t.hero.surname}</b>
-                </span>
-              </span>
+              <TypeWriter text={`${t.hero.name} ${t.hero.surname}`} delay={100} />
             </h2>
           </motion.div>
         </div>

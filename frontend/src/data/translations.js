@@ -140,6 +140,59 @@ export const translations = {
     },
     footer: {
       backToTop: 'Retour en haut'
+    },
+    keyStats: {
+      yearsExperience: "Années d'expérience",
+      companies: 'Entreprises',
+      degrees: 'Diplômes & Certifications',
+      languages: 'Langues parlées'
+    },
+    technicalSkills: {
+      title: 'Compétences Techniques',
+      skills: [
+        { name: 'Pack Office', icon: '💼', level: 5 },
+        { name: 'SAP', icon: '📊', level: 4 },
+        { name: 'Gestion Stocks', icon: '📦', level: 5 },
+        { name: 'Management', icon: '👥', level: 5 },
+        { name: 'Formation', icon: '🎓', level: 4 },
+        { name: 'Logistique', icon: '🚛', level: 4 }
+      ]
+    },
+    hobbies: {
+      title: "Centres d'Intérêt",
+      list: [
+        { name: 'Sport', icon: '⚽' },
+        { name: 'Voyages', icon: '✈️' },
+        { name: 'Brassage', icon: '🍺' },
+        { name: 'Lecture', icon: '📚' },
+        { name: 'Cuisine', icon: '👨‍🍳' },
+        { name: 'Technologie', icon: '💻' }
+      ]
+    },
+    certifications: {
+      title: 'Certifications & Permis',
+      list: [
+        { name: 'Permis B', icon: '🚗', year: '2011' },
+        { name: 'Chef Circulation', icon: '🚂', year: '2022' },
+        { name: 'Brasseur AFP', icon: '🍻', year: '2019' },
+        { name: 'Management', icon: '📋', year: '2017' }
+      ]
+    },
+    contact: {
+      title: 'Me Contacter',
+      namePlaceholder: 'Votre nom',
+      emailPlaceholder: 'Votre email',
+      messagePlaceholder: 'Votre message',
+      send: 'Envoyer',
+      sending: 'Envoi...',
+      sent: 'Envoyé !',
+      successMessage: 'Message envoyé avec succès !'
+    },
+    share: {
+      title: 'Partager ce CV',
+      linkCopied: 'Lien copié !',
+      qrTitle: 'Scannez pour accéder au CV',
+      qrDesc: 'Scannez ce QR code avec votre smartphone'
     }
   },
   de: {
@@ -283,6 +336,59 @@ export const translations = {
     },
     footer: {
       backToTop: 'Nach oben'
+    },
+    keyStats: {
+      yearsExperience: 'Jahre Erfahrung',
+      companies: 'Unternehmen',
+      degrees: 'Abschlüsse & Zertifikate',
+      languages: 'Gesprochene Sprachen'
+    },
+    technicalSkills: {
+      title: 'Technische Fähigkeiten',
+      skills: [
+        { name: 'Office Paket', icon: '💼', level: 5 },
+        { name: 'SAP', icon: '📊', level: 4 },
+        { name: 'Lagerverwaltung', icon: '📦', level: 5 },
+        { name: 'Management', icon: '👥', level: 5 },
+        { name: 'Ausbildung', icon: '🎓', level: 4 },
+        { name: 'Logistik', icon: '🚛', level: 4 }
+      ]
+    },
+    hobbies: {
+      title: 'Interessen',
+      list: [
+        { name: 'Sport', icon: '⚽' },
+        { name: 'Reisen', icon: '✈️' },
+        { name: 'Brauen', icon: '🍺' },
+        { name: 'Lesen', icon: '📚' },
+        { name: 'Kochen', icon: '👨‍🍳' },
+        { name: 'Technologie', icon: '💻' }
+      ]
+    },
+    certifications: {
+      title: 'Zertifikate & Lizenzen',
+      list: [
+        { name: 'Führerschein B', icon: '🚗', year: '2011' },
+        { name: 'Zugverkehrsleiter', icon: '🚂', year: '2022' },
+        { name: 'Braumeister AFP', icon: '🍻', year: '2019' },
+        { name: 'Management', icon: '📋', year: '2017' }
+      ]
+    },
+    contact: {
+      title: 'Kontaktieren Sie mich',
+      namePlaceholder: 'Ihr Name',
+      emailPlaceholder: 'Ihre E-Mail',
+      messagePlaceholder: 'Ihre Nachricht',
+      send: 'Senden',
+      sending: 'Wird gesendet...',
+      sent: 'Gesendet!',
+      successMessage: 'Nachricht erfolgreich gesendet!'
+    },
+    share: {
+      title: 'Diesen Lebenslauf teilen',
+      linkCopied: 'Link kopiert!',
+      qrTitle: 'Scannen Sie für den Zugriff',
+      qrDesc: 'Scannen Sie diesen QR-Code mit Ihrem Smartphone'
     }
   },
   it: {
@@ -426,6 +532,59 @@ export const translations = {
     },
     footer: {
       backToTop: 'Torna su'
+    },
+    keyStats: {
+      yearsExperience: 'Anni di esperienza',
+      companies: 'Aziende',
+      degrees: 'Diplomi & Certificazioni',
+      languages: 'Lingue parlate'
+    },
+    technicalSkills: {
+      title: 'Competenze Tecniche',
+      skills: [
+        { name: 'Pacchetto Office', icon: '💼', level: 5 },
+        { name: 'SAP', icon: '📊', level: 4 },
+        { name: 'Gestione Magazzino', icon: '📦', level: 5 },
+        { name: 'Management', icon: '👥', level: 5 },
+        { name: 'Formazione', icon: '🎓', level: 4 },
+        { name: 'Logistica', icon: '🚛', level: 4 }
+      ]
+    },
+    hobbies: {
+      title: 'Interessi',
+      list: [
+        { name: 'Sport', icon: '⚽' },
+        { name: 'Viaggi', icon: '✈️' },
+        { name: 'Birra artigianale', icon: '🍺' },
+        { name: 'Lettura', icon: '📚' },
+        { name: 'Cucina', icon: '👨‍🍳' },
+        { name: 'Tecnologia', icon: '💻' }
+      ]
+    },
+    certifications: {
+      title: 'Certificazioni & Patenti',
+      list: [
+        { name: 'Patente B', icon: '🚗', year: '2011' },
+        { name: 'Capo Circolazione', icon: '🚂', year: '2022' },
+        { name: 'Birraio AFP', icon: '🍻', year: '2019' },
+        { name: 'Management', icon: '📋', year: '2017' }
+      ]
+    },
+    contact: {
+      title: 'Contattami',
+      namePlaceholder: 'Il tuo nome',
+      emailPlaceholder: 'La tua email',
+      messagePlaceholder: 'Il tuo messaggio',
+      send: 'Invia',
+      sending: 'Invio...',
+      sent: 'Inviato!',
+      successMessage: 'Messaggio inviato con successo!'
+    },
+    share: {
+      title: 'Condividi questo CV',
+      linkCopied: 'Link copiato!',
+      qrTitle: 'Scansiona per accedere',
+      qrDesc: 'Scansiona questo QR code con il tuo smartphone'
     }
   },
   en: {
@@ -569,6 +728,59 @@ export const translations = {
     },
     footer: {
       backToTop: 'Back to top'
+    },
+    keyStats: {
+      yearsExperience: 'Years of Experience',
+      companies: 'Companies',
+      degrees: 'Degrees & Certifications',
+      languages: 'Languages Spoken'
+    },
+    technicalSkills: {
+      title: 'Technical Skills',
+      skills: [
+        { name: 'Office Suite', icon: '💼', level: 5 },
+        { name: 'SAP', icon: '📊', level: 4 },
+        { name: 'Stock Management', icon: '📦', level: 5 },
+        { name: 'Management', icon: '👥', level: 5 },
+        { name: 'Training', icon: '🎓', level: 4 },
+        { name: 'Logistics', icon: '🚛', level: 4 }
+      ]
+    },
+    hobbies: {
+      title: 'Interests',
+      list: [
+        { name: 'Sports', icon: '⚽' },
+        { name: 'Travel', icon: '✈️' },
+        { name: 'Brewing', icon: '🍺' },
+        { name: 'Reading', icon: '📚' },
+        { name: 'Cooking', icon: '👨‍🍳' },
+        { name: 'Technology', icon: '💻' }
+      ]
+    },
+    certifications: {
+      title: 'Certifications & Licenses',
+      list: [
+        { name: 'Driver License B', icon: '🚗', year: '2011' },
+        { name: 'Train Controller', icon: '🚂', year: '2022' },
+        { name: 'Brewer AFP', icon: '🍻', year: '2019' },
+        { name: 'Management', icon: '📋', year: '2017' }
+      ]
+    },
+    contact: {
+      title: 'Contact Me',
+      namePlaceholder: 'Your name',
+      emailPlaceholder: 'Your email',
+      messagePlaceholder: 'Your message',
+      send: 'Send',
+      sending: 'Sending...',
+      sent: 'Sent!',
+      successMessage: 'Message sent successfully!'
+    },
+    share: {
+      title: 'Share this CV',
+      linkCopied: 'Link copied!',
+      qrTitle: 'Scan to access CV',
+      qrDesc: 'Scan this QR code with your smartphone'
     }
   }
 };
